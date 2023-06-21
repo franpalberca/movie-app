@@ -21,12 +21,10 @@ function App() {
 
   const searchMovie = async(e) => {
     e.preventDefault();
-    console.log("Searching")
     try{
       const url = `https://api.themoviedb.org/3/search/movie?api_key=a05bfb2eb4f7c76fb556d97f5b4c0e6f&query=${query}`;
       const res = await fetch(url);
       const data = await res.json();
-      console.log(data);
       setMovies(data.results);
     }
     catch(e){

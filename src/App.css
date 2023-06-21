@@ -7,13 +7,15 @@ body {
   outline: none;
   background-image: url("../src/assets/unnamed.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  /*Añadir webkit*/
 }
 
 .container {
   width: 100%;
   margin: 1em auto;
   background-color: darkslategray;
+  
 }
 
 .grid {
@@ -22,4 +24,6 @@ body {
   grid-template-columns: repeat(4,1fr);
   grid-gap: 0.2em;
   justify-content: center;
+  overflow-y: auto;
+  height: 100vh;
 }
